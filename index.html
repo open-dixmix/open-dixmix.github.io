@@ -1,0 +1,368 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Dixmix</title>
+  <style>
+    body {
+      counter-reset: chapter;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 16px;
+      margin: 0 auto;
+      width: 75ch;
+    }
+
+    figcaption {
+      margin-top: 0.2em;
+    }
+
+    figcaption::before {
+      counter-increment: figure;
+      content: "Figure " counter(chapter)"." counter(figure)": ";
+    }
+
+    h1 {
+      counter-reset: figure section;
+    }
+
+    h2 {
+      counter-reset: subsection;
+    }
+
+    h1::before {
+      counter-increment: chapter;
+      content: counter(chapter)". ";
+    }
+
+    h2::before {
+      counter-increment: section;
+      content: counter(chapter)"." counter(section)" ";
+    }
+
+    h3::before {
+      counter-increment: subsection;
+      content: counter(chapter)"." counter(section)"." counter(subsection)" ";
+    }
+
+    p {
+      box-sizing: border-box;
+      margin: 0 0 0.2em 0;
+      text-align: justify;
+    }
+
+    p code {
+      white-space: nowrap;
+    }
+
+    pre {
+      padding: 0.3em 0;
+    }
+
+    .comment {
+      color: #888;
+      font-style: italic;
+    }
+
+    .keyword {
+      color: blue;
+    }
+
+    .literal {
+      color: green;
+    }
+
+    .specifier {
+      color: brown;
+    }
+
+    .poem {
+      font-style: italic;
+      padding: 1em;
+    }
+
+    box {
+      display: inline-block;
+    }
+
+    box>* {
+      display: block;
+      font-family: monospace;
+      font-size: 80%;
+    }
+
+    box>*>at {
+      display: inline-block;
+      min-width: 7em;
+      text-align: right;
+    }
+
+    box>*>at::after {
+      content: ":";
+    }
+
+    box>*:first-child>contains {
+      border-top: solid thin;
+    }
+
+    box>*>contains {
+      border: solid thin;
+      border-top: none;
+      display: inline-block;
+      min-width: 10em;
+      padding: 0.25em;
+      text-align: left;
+    }
+
+    box>binary {
+      font-style: italic;
+    }
+
+    box>binary>contains {
+      background-color: lightgray;
+    }
+
+    @media print {
+      figure {
+        page-break-inside: avoid;
+      }
+
+      h1 {
+        page-break-before: always;
+      }
+
+      h1:first-of-type {
+        page-break-before: avoid;
+      }
+
+      h2 {
+        page-break-before: always;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Introduction</h1>
+  <p class="poem">In the beginning, there was nothing. But nothing felt lonely. "If I am nothing," it reasoned, "there
+    must be something that gives me meaning." Out of nothing, something new popped into existence. "I am the origin of
+    everything," something proclaimed. "That's not true," nothing argued, "because I am not a thing. And without me,
+    you're nothing special." "Don't, don't be absurd," something stuttered. "Absurdity is my only quality," nothing
+    concluded.
+  </p>
+  <p>Dixmix combines <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">object-oriented</a> and <a
+      href="https://en.wikipedia.org/wiki/Functional_programming">functional</a> programming. I want to show that
+    object-oriented and functional programming are complementary, reinforcing paradigms. By sharing and documenting the
+    products of this personal endeavor, I hope to interest other people in this idea.</p>
+  <p>Functional programming embraces <a href="https://en.wikipedia.org/wiki/Referential_transparency">referential
+      transparency</a>. A referentially transparent function produces equal output for equal input values. The output
+    value of function <code>f</code>, where <code>f(x)=x+x<sup>2</sup></code>, is completely determined by input value
+    <code>x</code>. Functions are impervious to <a
+      href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">side effects</a>, because
+    referential transparency excludes side effects.
+  </p>
+  <p>The absence of side effects does not disqualify functional programming as a pragmatic programming paradigm. A
+    functional approach often gives an elegant and adequate solution. I hope Dixmix is an incentive for software
+    developers to discover what functional programming entails, because many developers have only experienced
+    programming with side effects.</p>
+  <p>Despite the effectiveness of functional programming, there are limits to what it can do. It doesn't make sense to
+    strive for a purely functional solution when the problem at hand inherently involves side effects e.g., persistent
+    storage. The very nature of a database is to persist changes. The side effects of a committed transaction
+    intentionally interfere with future transactions. Functional programming does not fit this problem domain.</p>
+  <p>To me, object-oriented programming is essentially a giant exercise in managing side effects in software systems.
+    The side effects of a method invocation are usually confined to a small number of closely related objects, but this
+    cannot be enforced. A method invocation can potentially change every object it can reach. This freedom explains why
+    object-oriented systems sometimes display <a
+      href="https://en.wikipedia.org/wiki/Action_at_a_distance_(computer_programming)">'spooky action at a
+      distance'</a>, where an interaction with one part of the system causes unexpected effects in another,
+    seemingly unrelated part of the system. The erratic behavior of these systems is nearly impossible to grasp.</p>
+  <p>Object-oriented programming empowers software developers to rely on side effects. Careless use
+    of this power leads to an intricate web of hidden dependencies in software systems that nobody is able to fully
+    comprehend. Functional programming avoids this complexity pitfall, because it forces developers to solve computing
+    problems with referentially transparent functions. I believe that many parts of software systems can be implemented
+    with 'pure' functions, without hidden dependencies. Some parts of a system need objects and their side effects, but
+    I suspect these 'dirty' parts will tend to become smaller over time.</p>
+  <p>In my opinion, object-oriented programming is not without its perils. On the other hand, I am also convinced that
+    functional programming is not suitable for solving all computing problems. Object-oriented programming fills the
+    gaps in the software landscape that functional programming cannot cover. Dixmix treats the two programming paradigms
+    as complementary. It is not an attempt to prove that one paradigm is superior over another. Method invocations on
+    objects fundamentally differ from function applications on input values. Dixmix appreciates and exploits these
+    differences, enabling objects and values to coexist and to thrive.</p>
+  <h2>Strategic goals</h2>
+  <p>Dixmix is an ambitious hobby project, and I do not have any realistic expectations about its development timeline.
+    The goal is not to deliver on time and within budget, because I am my own client, with an extremely flexible
+    deadline and an empty wallet. The development of Dixmix is only loosely guided by the following strategic goals.</p>
+  <ul>
+    <li><dfn>Respect the differences between object-oriented and functional programming.</dfn>
+      <p>Dixmix does not try to embed one paradigm into the other. It supports both paradigms, without sacrificing their
+        distinctive and conflicting features. The biggest challenge is to ensure referential transparency of functions,
+        that coexist with methods whose invocations can cause side effects. Function applications must be prevented from
+        witnessing the dynamics of method invocations on objects.</p>
+    </li>
+    <li><dfn>Treat objects and values as similar things.</dfn>
+      <p>At first glance, this second goal seems to contradict the first one. However, the first goal targets
+        computations e.g., method invocations and function applications. The second goal is about the things that these
+        computations manipulate. A uniform data structure that fits both objects and values, simplifies the development
+        of Dixmix, because it allows for solutions that work for objects and values alike.</p>
+    </li>
+    <li><dfn>Prefer simplicity over performance.</dfn>
+      <p>In 1974, Donald Knuth described <a href="https://wiki.c2.com/?PrematureOptimization">premature optimization</a>
+        as the root of all evil in programming. Over the decades, this statement has only gained strength. Today's
+        hardware is mind-bogglingly powerful. Performance is not a significant concern in Dixmix. The main goal is to
+        create the simplest solution that works. Ideally, a reference implementation of Dixmix can be understood and
+        maintained by a single, experienced developer.</p>
+    </li>
+    <li><dfn>Promote education, experimentation and customization.</dfn>
+      <p>I want Dixmix to be a creative playground for students. It is not designed to be a competitive, commercial
+        product. It should assist students on their journey from the very basics of programming to advanced topics like
+        compilers and garbage collection. On the way, they should be stimulated to try out ideas and to tweak the
+        internals of the product. I hope Dixmix can teach students how professional programming platforms operate in the
+        real world. <a href="https://en.wikipedia.org/wiki/Minix">Minix</a> is my inspiration for this goal, despite
+        Minix teaching the inner workings of an operating system.</p>
+    </li>
+    <li><dfn><a href="https://www.goodreads.com/quotes/95859-share-and-enjoy-is-the-company-motto-of-the-hugely">Share
+          and enjoy!</a></dfn>
+      <p>In memory of Douglas Adams, Dixmix adopts this slogan of the Sirius Cybernetics Corporation. I hope Dixmix will
+        ultimately foster a happy and confident community of motivated volunteers who donate their time and energy,
+        because they want to improve the experience for others. The liberal license of Dixmix allows anyone to pluck the
+        fruits of these efforts, even for commercial purposes.</p>
+    </li>
+  </ul>
+  <p>These goals depict the long term vision. On the short term however, Dixmix needs to reach a level of maturity,
+    which suffices to explain the general idea behind the project, and to attract attention. This document describes the
+    development of the initial prototype in these early stages of the project. The remainder of this chapter explains
+    what this initial prototype has to offer. The other chapters specify how the internals of Dixmix work together to
+    create a platform for object-oriented and functional programming.</p>
+  <h2>Minimum Viable Product</h2>
+  <p>Dixmix is a platform for object-oriented and functional programming. The platform is made from three constituents.
+    The runtime system provides the machinery to execute compiled code. The service library contains prefabricated
+    providers for a range of services. The language framework contains compilers and transpilers for programming
+    languages.</p>
+  <figure>
+    <svg width="12em" height="12em" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 100 50 A 50 50 0 0 1 25 93 L 50 50" fill="red" fill-opacity="0.5" />
+      <text x="50" y="70" style="fill:black;font-size:xx-small">runtime</text>
+      <text x="50" y="80" style="fill:black;font-size:xx-small">system</text>
+      <path d="M 100 50 A 50 50 0 0 0 25 7 L 50 50" fill="blue" fill-opacity="0.5" />
+      <text x="48" y="25" style="fill:black;font-size:xx-small">language</text>
+      <text x="48" y="35" style="fill:black;font-size:xx-small">framework</text>
+      <path d="M 25 93 A 50 50 0 0 1 25 7 L 50 50" fill="green" fill-opacity="0.5" />
+      <text x="10" y="50" style="fill:black;font-size:xx-small">service</text>
+      <text x="10" y="60" style="fill:black;font-size:xx-small">library</text>
+    </svg>
+    <figcaption>Programming platform</figcaption>
+  </figure>
+  <p>The usage of a circle in this figure is deliberate. Every constituent of Dixmix depends on the other two. The
+    constituents need each other, and the circle shows how each constituent is wedged between the other two.</p>
+  <h3>Runtime system</h3>
+  <p>The runtime system is the workhorse of Dixmix. It mainly consists of the virtual machine (VM) and the garbage
+    collector (GC). The VM is an abstract processor, which executes instructions of compiled code. The GC works in close
+    tandem with the VM, providing automatic memory management.</p>
+  <p>VM instructions operate on register operands. For example, the <code>add</code> instruction expects three operands:
+    one destination register and two source registers. This register-based approach resembles how real hardware executes
+    instructions, and decompiled code should read like source code in a conventional assembly language.</p>
+  <p>The <dfn>box</dfn> is the only data structure in the runtime system. All objects and values are uniformly
+    represented as boxes at runtime, and the VM has specialized instructions to examine and to manipulate the memory
+    slots of boxes.</p>
+  <p>A register references a box that spans a finite number of consecutive memory slots. Consider the box of a counter
+    object, which tracks the number of visitors to a website.</p>
+  <figure>
+    <box>
+      <register>
+        <at>self</at>
+        <contains>⮌</contains>
+      </register>
+      <register>
+        <at>count</at>
+        <contains>42</contains>
+      </register>
+    </box>
+    <figcaption>Counter object</figcaption>
+  </figure>
+  <p>The register slot at offset <code>self</code> contains the self reference, which references the counter object
+    itself. The mutable register slot at offset <code>count</code> contains the current value of the counter. The
+    website has apparently been visited fourty-two times.</p>
+  <p>Compiled code runs in a <dfn>modus operandi</dfn>. A function is a lambda <a
+      href="https://en.wikipedia.org/wiki/Closure_(computer_programming)">closure</a>. The lambda modus operandi
+    classifies referentially transparent code. The delta modus operandi classifies code that runs with side effects. A
+    method is a delta closure. Lambda closures cannot call referentially-opaque delta closures. They are furthermore
+    prevented from accessing variable content. When a lambda closure attempts to access the variable <code>count</code>
+    register of a counter object, the runtime system forbids the access and aborts with an error. These two restrictions
+    protect referential transparency of lambda closures at runtime.</p>
+  <p>The runtime system is unaware of object-oriented and functional programming. Mutable and immutable boxes in memory
+    are decent data structures for objects and values. The runtime restrictions on lambda closures isolate side effects
+    in delta closures. Functions and methods are just closures that run in a different modus operandi. As far as the
+    runtime system is concerned, its job is to execute the code of lambda and delta closures that operate on mutable and
+    immutable boxes.</p>
+  <p>The MVP must ship a mature VM. The first implementation of the runtime system should give a pretty clear picture of
+    the abstract machine that executes instructions of compiled code. The GC is on the other hand less important. The
+    MVP ships a simple, stop-the-world GC with subpar performance. On the short term, GC performance is not on the
+    radar. A low-latency, generational garbage collector with stellar performance is a long term concern.</p>
+  <h3>Service library</h3>
+  <p>The service library is the standard toolbox of Dixmix. When developers build software, they should not have to
+    reinvent the wheel. Service providers are basic building blocks that solve common computing problems. Developers
+    import services in their source code to use these prefabricated building blocks. Services promote a modular
+    composition of software.</p>
+  <p>A service is an interface with operations. At runtime, some service provider implements these service operations.
+    When the runtime system loads compiled code, it first determines the names of services which the code imports. These
+    names are subsequently resolved to actual service providers, which may force the runtime system to load more
+    compiled code. It also implies that cyclic dependencies between service providers cannot be resolved. In many ways,
+    the service library of Dixmix is an adaptation of the <a
+      href="https://en.wikipedia.org/wiki/Service_locator_pattern">service locator</a> pattern.</p>
+  <p>A service is also a namespace for the types in the signatures of its operations. The presence of this type
+    information is relevant in statically-typed languages, but the MVP does not support types. Or rather, the MVP only
+    supports one generic type i.e., anything that fits in a register. Service operations in the MVP always consume input
+    registers and produce output registers.</p>
+  <p>I expect the service library of Dixmix to evolve over many iterations. It will take a long time to discover the
+    right boundaries for services, because there are various forces at work that cluster operations together in a
+    service. For example, it feels natural to have a service <code class="specifier">'std.int'</code> that provides
+    operations on integers, like comparison and arithmetic operations. It should probably also provide an operation to
+    calculate the greatest common divisor of two integers. But the inclusion of an operation for primality testing is
+    less obvious. It feels just as natural to exclude this advanced functionality from the service library, because it
+    complicates development and maintenance.</p>
+  <p>When is a computing problem common enough to 'earn' a spot in a small standard library? A compromise that improves
+    interoperability, is to include a standard interface in the service library, without providing a default
+    implementation. The service library could define a standard interface for a service that deals with primality
+    testing and other advanced numerical algorithms. Developers could then pick their favorite provider for this service
+    among a set of competing implementations.</p>
+  <p>The service library in the MVP only ships providers for services, which are absolutely essential in order to
+    demonstrate a simple interactive application, like guessing a random number. On the long term, the service library
+    hopefully converges to a small, consistent and intuitive set of standard interfaces and default providers.</p>
+  <h3>Language framework</h3>
+  <p>The language framework of Dixmix is a necessary concession. Developers can be extremely adamant about programming
+    languages. They are convinced their beloved language is best programming language, regardless what problem the
+    software is trying to solve. The definitive way to resolve this dispute is to have a contest where different
+    languages can compete for developers. The language framework is the arena for this contest. It allows anyone to
+    experiment with programming language features, and promote them to other developers.</p>
+  <p>The framework supports transpilers and compilers for programming languages. A transpiler is easier to write, but a
+    compiler offers complete control over code generation. The MVP ships exactly one transpiler and one compiler. Diet
+    is the compiled programming language and Unity is the transpiled programming language.</p>
+  <p>Diet is not intended to be the most programmer-friendly language. It lacks syntactic sugar to simplify common
+    constructs in programs. Diet is designed to be a simple imperative language that reflects the capabilities of the
+    underlying VM i.e., a high-level assembly language. It should be easy to understand how the Diet compiler generates
+    VM instructions for language constructs. The next Diet script is the obligatory language example.</p>
+  <pre><span class="comment">-- lookup print operation from std.fx service</span>
+<span class="keyword">let</span> print = <span class="specifier">'std.fx'</span>[<span class="literal">"print"</span>]
+print(<span class="literal">"Hello, world!"</span>)</pre>
+  <p>Unity is a general-purpose programming language that transpiles down to Diet. Unity tries to balance simplicity and
+    expressiveness. It adds powerful language constructs to Diet like destructuring and pattern matching, while also
+    keeping the same 'verbose' keywords, <code class="keyword">if</code>, <code class="keyword">do</code>, <code
+      class="keyword">let</code>, <code class="keyword">while</code>, <code class="keyword">repeat</code>, etc. Although
+    Unity is designed to be a beginner-friendly language, it is not an underpowered programming language. As developers
+    gain experience, they should learn and discover the more advanced, and possibly intimidating, features. The next
+    Unity script uses destructuring to simplify the previous Diet example.</p>
+  <pre><span class="comment">-- destructure print operation from std.fx service</span>
+<span class="keyword">let</span> { print } = <span class="specifier">'std.fx'</span> 
+print(<span class="literal">"Hello, world!"</span>)</pre>
+  <p>The language framework is by far the least polished part of the MVP. The Diet compiler and Unity transpiler suffice
+    to demonstrate how Dixmix intends to use the language framework. On the long term, compilers and transpilers should
+    be integrated with Dixmix, i.e. using service providers for scanners, parsers, code generators and other language
+    tools.</p>
+  <h1>Runtime system</h1>
+  <p>Explain enough implementation details without committing to one implementation language.</p>
+  <h1>Service library</h1>
+  <p>TODO.</p>
+  <h1>Language framework</h1>
+  <p>TODO.</p>
+</body>
+
+</html>
