@@ -143,100 +143,134 @@
 
 <body>
   <h1>Introduction</h1>
-  <p class="poem">In the beginning, there was nothing. But nothing felt lonely. "If I am nothing," it reasoned, "there
-    must be something that gives me meaning." Out of nothing, something new popped into existence. "I am the origin of
-    everything," something proclaimed. "That's not true," nothing argued, "because I am not a thing. And without me,
-    you're nothing special." "Don't, don't be absurd," something stuttered. "Absurdity is my only quality," nothing
-    concluded.
+  <p class="poem">
+    In the beginning, there was nothing.
+    But nothing felt lonely.
+    "If I am nothing," it reasoned, "there must be something that gives me meaning."
+    Out of nothing, something new popped into existence.
+    "I am the origin of everything," something proclaimed.
+    "That's not true," nothing argued, "because I am not a thing.
+    And without me, you're nothing special."
+    "Don't, don't be absurd," something stuttered.
+    "Absurdity is my only quality," nothing concluded.
   </p>
-  <p>Dixmix combines <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">object-oriented</a> and <a
-      href="https://en.wikipedia.org/wiki/Functional_programming">functional</a> programming. I want to show that
-    object-oriented and functional programming are complementary, reinforcing paradigms. By sharing and documenting the
-    products of this personal endeavor, I hope to interest other people in this idea.</p>
-  <p>Functional programming embraces <a href="https://en.wikipedia.org/wiki/Referential_transparency">referential
-      transparency</a>. A referentially transparent function produces equal output for equal input values. The output
-    value of function <code>f</code>, where <code>f(x)=x+x<sup>2</sup></code>, is completely determined by input value
-    <code>x</code>. Functions are impervious to <a
-      href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">side effects</a>, because
-    referential transparency excludes side effects.
+  <p>
+    Dixmix combines <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">object-oriented</a> and <a href="https://en.wikipedia.org/wiki/Functional_programming">functional</a> programming.
+    I want to show that object-oriented and functional programming are complementary, reinforcing paradigms.
+    By sharing and documenting the products of this personal endeavor, I hope to interest other people in this idea.
   </p>
-  <p>The absence of side effects does not disqualify functional programming as a pragmatic programming paradigm. A
-    functional approach often gives an elegant and adequate solution. I hope Dixmix is an incentive for software
-    developers to discover what functional programming entails, because many developers have only experienced
-    programming with side effects.</p>
-  <p>Despite the effectiveness of functional programming, there are limits to what it can do. It doesn't make sense to
-    strive for a purely functional solution when the problem at hand inherently involves side effects e.g., persistent
-    storage. The very nature of a database is to persist changes. The side effects of a committed transaction
-    intentionally interfere with future transactions. Functional programming does not fit this problem domain.</p>
-  <p>To me, object-oriented programming is essentially a giant exercise in managing side effects in software systems.
-    The side effects of a method invocation are usually confined to a small number of closely related objects, but this
-    cannot be enforced. A method invocation can potentially change every object it can reach. This freedom explains why
-    object-oriented systems sometimes display <a
-      href="https://en.wikipedia.org/wiki/Action_at_a_distance_(computer_programming)">'spooky action at a
-      distance'</a>, where an interaction with one part of the system causes unexpected effects in another,
-    seemingly unrelated part of the system. The erratic behavior of these systems is nearly impossible to grasp.</p>
-  <p>Object-oriented programming empowers software developers to rely on side effects. Careless use
-    of this power leads to an intricate web of hidden dependencies in software systems that nobody is able to fully
-    comprehend. Functional programming avoids this complexity pitfall, because it forces developers to solve computing
-    problems with referentially transparent functions. I believe that many parts of software systems can be implemented
-    with 'pure' functions, without hidden dependencies. Some parts of a system need objects and their side effects, but
-    I suspect these 'dirty' parts will tend to become smaller over time.</p>
-  <p>In my opinion, object-oriented programming is not without its perils. On the other hand, I am also convinced that
-    functional programming is not suitable for solving all computing problems. Object-oriented programming fills the
-    gaps in the software landscape that functional programming cannot cover. Dixmix treats the two programming paradigms
-    as complementary. It is not an attempt to prove that one paradigm is superior over another. Method invocations on
-    objects fundamentally differ from function applications on input values. Dixmix appreciates and exploits these
-    differences, enabling objects and values to coexist and to thrive.</p>
+  <p>
+    Functional programming embraces <a href="https://en.wikipedia.org/wiki/Referential_transparency">referential transparency</a>.
+    A referentially transparent function produces equal output for equal input values.
+    The output value of function <code>f</code>, where <code>f(x)=x+x<sup>2</sup></code>, is completely determined by input value <code>x</code>.
+    Functions are impervious to <a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">side effects</a>, because referential transparency excludes side effects.
+  </p>
+  <p>
+    The absence of side effects does not disqualify functional programming as a pragmatic programming paradigm.
+    A functional approach often gives an elegant and adequate solution.
+    I hope Dixmix is an incentive for software developers to discover what functional programming entails, because many
+    developers have only experienced programming with side effects.
+  </p>
+  <p>
+    Despite the effectiveness of functional programming, there are limits to what it can do.
+    It doesn't make sense to strive for a purely functional solution when the problem at hand inherently involves side effects e.g., persistent storage.
+    The very nature of a database is to persist changes.
+    The side effects of a committed transaction intentionally interfere with future transactions.
+    Functional programming does not fit this problem domain.
+  </p>
+  <p>
+    To me, object-oriented programming is essentially a giant exercise in managing side effects in software systems.
+    The side effects of a method invocation are usually confined to a small number of closely related objects, but this cannot be enforced.
+    A method invocation can potentially change every object it can reach.
+    This freedom explains why object-oriented systems sometimes display <a href="https://en.wikipedia.org/wiki/Action_at_a_distance_(computer_programming)">'spooky action at a distance'</a>, where an interaction with one part of the system causes unexpected effects in another, seemingly unrelated part of the system.
+    The erratic behavior of these systems is nearly impossible to grasp.
+  </p>
+  <p>
+    Object-oriented programming empowers software developers to rely on side effects.
+    Careless use of this power leads to an intricate web of hidden dependencies in software systems that nobody is able to fully comprehend.
+    Functional programming avoids this complexity pitfall, because it forces developers to solve computing problems with referentially transparent functions.
+    I believe that many parts of software systems can be implemented with 'pure' functions, without hidden dependencies.
+    Some parts of a system need objects and their side effects, but I suspect these 'dirty' parts will tend to become smaller over time.
+  </p>
+  <p>
+    In my opinion, object-oriented programming is not without its perils.
+    On the other hand, I am also convinced that functional programming is not suitable for solving all computing problems.
+    Object-oriented programming fills the gaps in the software landscape that functional programming cannot cover.
+    Dixmix treats the two programming paradigms as complementary.
+    It is not an attempt to prove that one paradigm is superior over another.
+    Method invocations on objects fundamentally differ from function applications on input values.
+    Dixmix appreciates and exploits these differences, enabling objects and values to coexist and to thrive.
+  </p>
   <h2>Strategic goals</h2>
-  <p>Dixmix is an ambitious hobby project, and I do not have any realistic expectations about its development timeline.
-    The goal is not to deliver on time and within budget, because I am my own client, with an extremely flexible
-    deadline and an empty wallet. The development of Dixmix is only loosely guided by the following strategic goals.</p>
+  <p>
+    Dixmix is an ambitious hobby project, and I do not have any realistic expectations about its development timeline.
+    The goal is not to deliver on time and within budget, because I am my own client, with an extremely flexible deadline and an empty wallet.
+    The development of Dixmix is only loosely guided by the following strategic goals.
+  </p>
   <ul>
-    <li><dfn>Respect the differences between object-oriented and functional programming.</dfn>
-      <p>Dixmix does not try to embed one paradigm into the other. It supports both paradigms, without sacrificing their
-        distinctive and conflicting features. The biggest challenge is to ensure referential transparency of functions,
-        that coexist with methods whose invocations can cause side effects. Function applications must be prevented from
-        witnessing the dynamics of method invocations on objects.</p>
+    <li>
+      <dfn>Respect the differences between object-oriented and functional programming.</dfn>
+      <p>
+        Dixmix does not try to embed one paradigm into the other.
+        It supports both paradigms, without sacrificing their distinctive and conflicting features.
+        The biggest challenge is to ensure referential transparency of functions, that coexist with methods whose invocations can cause side effects.
+        Function applications must be prevented from witnessing the dynamics of method invocations on objects.
+      </p>
     </li>
-    <li><dfn>Treat objects and values as similar things.</dfn>
-      <p>At first glance, this second goal seems to contradict the first one. However, the first goal targets
-        computations e.g., method invocations and function applications. The second goal is about the things that these
-        computations manipulate. A uniform data structure that fits both objects and values, simplifies the development
-        of Dixmix, because it allows for solutions that work for objects and values alike.</p>
+    <li>
+      <dfn>Treat objects and values as similar things.</dfn>
+      <p>
+        At first glance, this second goal seems to contradict the first one.
+        However, the first goal targets computations e.g., method invocations and function applications.
+        The second goal is about the things that these computations manipulate.
+        A uniform data structure that fits both objects and values, simplifies the development of Dixmix, because it allows for solutions that work for objects and values alike.
+      </p>
     </li>
-    <li><dfn>Prefer simplicity over performance.</dfn>
-      <p>In 1974, Donald Knuth described <a href="https://wiki.c2.com/?PrematureOptimization">premature optimization</a>
-        as the root of all evil in programming. Over the decades, this statement has only gained strength. Today's
-        hardware is mind-bogglingly powerful. Performance is not a significant concern in Dixmix. The main goal is to
-        create the simplest solution that works. Ideally, a reference implementation of Dixmix can be understood and
-        maintained by a single, experienced developer.</p>
+    <li>
+      <dfn>Prefer simplicity over performance.</dfn>
+      <p>
+        In 1974, Donald Knuth described <a href="https://wiki.c2.com/?PrematureOptimization">premature optimization</a> as the root of all evil in programming.
+        Over the decades, this statement has only gained strength.
+        Today's hardware is mind-bogglingly powerful.
+        Performance is not a significant concern in Dixmix.
+        The main goal is to create the simplest solution that works.
+        Ideally, a reference implementation of Dixmix can be understood and maintained by a single, experienced developer.
+      </p>
     </li>
-    <li><dfn>Promote education, experimentation and customization.</dfn>
-      <p>I want Dixmix to be a creative playground for students. It is not designed to be a competitive, commercial
-        product. It should assist students on their journey from the very basics of programming to advanced topics like
-        compilers and garbage collection. On the way, they should be stimulated to try out ideas and to tweak the
-        internals of the product. I hope Dixmix can teach students how professional programming platforms operate in the
-        real world. <a href="https://en.wikipedia.org/wiki/Minix">Minix</a> is my inspiration for this goal, despite
-        Minix teaching the inner workings of an operating system.</p>
+    <li>
+      <dfn>Promote education, experimentation and customization.</dfn>
+      <p>
+        I want Dixmix to be a creative playground for students.
+        It is not designed to be a competitive, commercial product.
+        It should assist students on their journey from the very basics of programming to advanced topics like compilers and garbage collection.
+        On the way, they should be stimulated to try out ideas and to tweak the internals of the product.
+        I hope Dixmix can teach students how professional programming platforms operate in the real world.
+        <a href="https://en.wikipedia.org/wiki/Minix">Minix</a> is my inspiration for this goal, despite Minix teaching the inner workings of an operating system.
+      </p>
     </li>
-    <li><dfn><a href="https://www.goodreads.com/quotes/95859-share-and-enjoy-is-the-company-motto-of-the-hugely">Share
-          and enjoy!</a></dfn>
-      <p>In memory of Douglas Adams, Dixmix adopts this slogan of the Sirius Cybernetics Corporation. I hope Dixmix will
-        ultimately foster a happy and confident community of motivated volunteers who donate their time and energy,
-        because they want to improve the experience for others. The liberal license of Dixmix allows anyone to pluck the
-        fruits of these efforts, even for commercial purposes.</p>
+    <li>
+      <dfn>Share and enjoy!</dfn>
+      <p>
+        In memory of <a href="https://en.wikipedia.org/wiki/Douglas_Adams">Douglas Adams</a>, Dixmix adopts this slogan of the Sirius Cybernetics Corporation.
+        I hope Dixmix will ultimately foster a happy and confident community of motivated volunteers who donate their time and energy, because they want to improve the experience for others.
+        The liberal license of Dixmix allows anyone to pluck the fruits of these efforts, even for commercial purposes.
+      </p>
     </li>
   </ul>
-  <p>These goals depict the long term vision. On the short term however, Dixmix needs to reach a level of maturity,
-    which suffices to explain the general idea behind the project, and to attract attention. This document describes the
-    development of the initial prototype in these early stages of the project. The remainder of this chapter explains
-    what this initial prototype has to offer. The other chapters specify how the internals of Dixmix work together to
-    create a platform for object-oriented and functional programming.</p>
+  <p>
+    These goals depict the long term vision. On the short term however, Dixmix needs to reach a level of maturity, which suffices to explain the general idea behind the project, and to attract attention.
+    This document describes the development of the initial prototype in these early stages of the project.
+    The remainder of this chapter explains what this initial prototype has to offer.
+    The other chapters specify how the internals of Dixmix work together to create a platform for object-oriented and functional programming.
+  </p>
   <h2>Minimum Viable Product</h2>
-  <p>Dixmix is a platform for object-oriented and functional programming. The platform is made from three constituents.
-    The runtime system provides the machinery to execute compiled code. The service library contains prefabricated
-    providers for a range of services. The language framework contains compilers and transpilers for programming
-    languages.</p>
+  <p>
+    Dixmix is a platform for object-oriented and functional programming.
+    The platform is made from three constituents.
+    The runtime system provides the machinery to execute compiled code.
+    The service library contains prefabricated providers for a range of services.
+    The language framework contains compilers and transpilers for programming languages.
+  </p>
   <figure>
     <svg width="12em" height="12em" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
       <path d="M 100 50 A 50 50 0 0 1 25 93 L 50 50" fill="red" fill-opacity="0.5" />
@@ -251,20 +285,31 @@
     </svg>
     <figcaption>Programming platform</figcaption>
   </figure>
-  <p>The usage of a circle in this figure is deliberate. Every constituent of Dixmix depends on the other two. The
-    constituents need each other, and the circle shows how each constituent is wedged between the other two.</p>
+  <p>
+    The usage of a circle in this figure is deliberate.
+    Every constituent of Dixmix depends on the other two.
+    The constituents need each other, and the circle shows how each constituent is wedged between the other two.
+  </p>
   <h3>Runtime system</h3>
-  <p>The runtime system is the workhorse of Dixmix. It mainly consists of the virtual machine (VM) and the garbage
-    collector (GC). The VM is an abstract processor, which executes instructions of compiled code. The GC works in close
-    tandem with the VM, providing automatic memory management.</p>
-  <p>VM instructions operate on register operands. For example, the <code>add</code> instruction expects three operands:
-    one destination register and two source registers. This register-based approach resembles how real hardware executes
-    instructions, and decompiled code should read like source code in a conventional assembly language.</p>
-  <p>The <dfn>box</dfn> is the only data structure in the runtime system. All objects and values are uniformly
-    represented as boxes at runtime, and the VM has specialized instructions to examine and to manipulate the memory
-    slots of boxes.</p>
-  <p>A register references a box that spans a finite number of consecutive memory slots. Consider the box of a counter
-    object, which tracks the number of visitors to a website.</p>
+  <p>
+    The runtime system is the workhorse of Dixmix.
+    It mainly consists of the virtual machine (VM) and the garbage collector (GC).
+    The VM is an abstract processor, which executes instructions of compiled code.
+    The GC works in close tandem with the VM, providing automatic memory management.
+  </p>
+  <p>
+    VM instructions operate on register operands.
+    For example, the <code>add</code> instruction expects three operands: one destination register and two source registers.
+    This register-based approach resembles how real hardware executes instructions, and decompiled code should read like source code in a conventional assembly language.
+  </p>
+  <p>
+    The <dfn>box</dfn> is the only data structure in the runtime system.
+    All objects and values are uniformly represented as boxes at runtime, and the VM has specialized instructions to examine and to manipulate the memory slots of boxes.
+  </p>
+  <p>
+    A register references a box that spans a finite number of consecutive memory slots.
+    Consider the box of a counter object, which tracks the number of visitors to a website.
+  </p>
   <figure>
     <box>
       <register>
@@ -278,91 +323,596 @@
     </box>
     <figcaption>Counter object</figcaption>
   </figure>
-  <p>The register slot at offset <code>self</code> contains the self reference, which references the counter object
-    itself. The mutable register slot at offset <code>count</code> contains the current value of the counter. The
-    website has apparently been visited fourty-two times.</p>
-  <p>Compiled code runs in a <dfn>modus operandi</dfn>. A function is a lambda <a
-      href="https://en.wikipedia.org/wiki/Closure_(computer_programming)">closure</a>. The lambda modus operandi
-    classifies referentially transparent code. The delta modus operandi classifies code that runs with side effects. A
-    method is a delta closure. Lambda closures cannot call referentially-opaque delta closures. They are furthermore
-    prevented from accessing variable content. When a lambda closure attempts to access the variable <code>count</code>
-    register of a counter object, the runtime system forbids the access and aborts with an error. These two restrictions
-    protect referential transparency of lambda closures at runtime.</p>
-  <p>The runtime system is unaware of object-oriented and functional programming. Mutable and immutable boxes in memory
-    are decent data structures for objects and values. The runtime restrictions on lambda closures isolate side effects
-    in delta closures. Functions and methods are just closures that run in a different modus operandi. As far as the
-    runtime system is concerned, its job is to execute the code of lambda and delta closures that operate on mutable and
-    immutable boxes.</p>
-  <p>The MVP must ship a mature VM. The first implementation of the runtime system should give a pretty clear picture of
-    the abstract machine that executes instructions of compiled code. The GC is on the other hand less important. The
-    MVP ships a simple, stop-the-world GC with subpar performance. On the short term, GC performance is not on the
-    radar. A low-latency, generational garbage collector with stellar performance is a long term concern.</p>
+  <p>
+    The register slot at offset <code>self</code> contains the self reference, which references the counter object itself.
+    The mutable register slot at offset <code>count</code> contains the current value of the counter.
+    The website has apparently been visited forty-two times.
+  </p>
+  <p>
+    Compiled code runs in a <dfn>modus operandi</dfn>.
+    A function is a lambda <a href="https://en.wikipedia.org/wiki/Closure_(computer_programming)">closure</a>.
+    The lambda modus operandi classifies referentially transparent code.
+    The delta modus operandi classifies code that runs with side effects.
+    A method is a delta closure.
+    Lambda closures cannot call referentially-opaque delta closures.
+    They are furthermore prevented from accessing variable content.
+    When a lambda closure attempts to access the variable <code>count</code> register of a counter object, the runtime system forbids the access and aborts with an error.
+    These two restrictions protect referential transparency of lambda closures at runtime.
+  </p>
+  <p>
+    The runtime system is unaware of object-oriented and functional programming.
+    Mutable and immutable boxes in memory are decent data structures for objects and values.
+    The runtime restrictions on lambda closures isolate side effects in delta closures.
+    Functions and methods are just closures that run in a different modus operandi.
+    As far as the runtime system is concerned, its job is to execute the code of lambda and delta closures that operate on mutable and immutable boxes.
+  </p>
+  <p>
+    The MVP must ship a mature VM.
+    The first implementation of the runtime system should give a pretty clear picture of the abstract machine that executes instructions of compiled code.
+    The GC is on the other hand less important.
+    The MVP ships a simple, stop-the-world GC with subpar performance.
+    On the short term, GC performance is not on the radar.
+    A low-latency, generational garbage collector with stellar performance is a long term concern.
+  </p>
   <h3>Service library</h3>
-  <p>The service library is the standard toolbox of Dixmix. When developers build software, they should not have to
-    reinvent the wheel. Service providers are basic building blocks that solve common computing problems. Developers
-    import services in their source code to use these prefabricated building blocks. Services promote a modular
-    composition of software.</p>
-  <p>A service is an interface with operations. At runtime, some service provider implements these service operations.
-    When the runtime system loads compiled code, it first determines the names of services which the code imports. These
-    names are subsequently resolved to actual service providers, which may force the runtime system to load more
-    compiled code. It also implies that cyclic dependencies between service providers cannot be resolved. In many ways,
-    the service library of Dixmix is an adaptation of the <a
-      href="https://en.wikipedia.org/wiki/Service_locator_pattern">service locator</a> pattern.</p>
-  <p>A service is also a namespace for the types in the signatures of its operations. The presence of this type
-    information is relevant in statically-typed languages, but the MVP does not support types. Or rather, the MVP only
-    supports one generic type i.e., anything that fits in a register. Service operations in the MVP always consume input
-    registers and produce output registers.</p>
-  <p>I expect the service library of Dixmix to evolve over many iterations. It will take a long time to discover the
-    right boundaries for services, because there are various forces at work that cluster operations together in a
-    service. For example, it feels natural to have a service <code class="specifier">'std.int'</code> that provides
-    operations on integers, like comparison and arithmetic operations. It should probably also provide an operation to
-    calculate the greatest common divisor of two integers. But the inclusion of an operation for primality testing is
-    less obvious. It feels just as natural to exclude this advanced functionality from the service library, because it
-    complicates development and maintenance.</p>
-  <p>When is a computing problem common enough to 'earn' a spot in a small standard library? A compromise that improves
-    interoperability, is to include a standard interface in the service library, without providing a default
-    implementation. The service library could define a standard interface for a service that deals with primality
-    testing and other advanced numerical algorithms. Developers could then pick their favorite provider for this service
-    among a set of competing implementations.</p>
-  <p>The service library in the MVP only ships providers for services, which are absolutely essential in order to
-    demonstrate a simple interactive application, like guessing a random number. On the long term, the service library
-    hopefully converges to a small, consistent and intuitive set of standard interfaces and default providers.</p>
+  <p>
+    The service library is the standard toolbox of Dixmix.
+    When developers build software, they should not have to reinvent the wheel.
+    Service providers are basic building blocks that solve common computing problems.
+    Developers import services in their source code to use these prefabricated building blocks.
+    Services promote a modular composition of software.
+  </p>
+  <p>
+    A service is an interface with operations.
+    At runtime, some service provider implements these service operations.
+    When the runtime system loads compiled code, it first determines the names of services which the code imports.
+    These names are subsequently resolved to actual service providers, which may force the runtime system to load more compiled code.
+    It also implies that cyclic dependencies between service providers cannot be resolved.
+    In many ways, the service library of Dixmix is an adaptation of the <a href="https://en.wikipedia.org/wiki/Service_locator_pattern">service locator</a> pattern.
+  </p>
+  <p>
+    A service is also a namespace for the types in the signatures of its operations.
+    The presence of this type information is relevant in statically-typed languages, but the MVP does not support types.
+    Or rather, the MVP only supports one generic type i.e., anything that fits in a register.
+    Service operations in the MVP always consume input registers and produce output registers.
+  </p>
+  <p>
+    I expect the service library of Dixmix to evolve over many iterations.
+    It will take a long time to discover the right boundaries for services, because there are various forces at work that cluster operations together in a service.
+    For example, it feels natural to have a service <code class="specifier">'std.int'</code> that provides operations on integers, like comparison and arithmetic operations.
+    It should probably also provide an operation to calculate the greatest common divisor of two integers.
+    But the inclusion of an operation for primality testing is less obvious.
+    It feels just as natural to exclude this advanced functionality from the service library, because it complicates development and maintenance.
+  </p>
+  <p>
+    When is a computing problem common enough to 'earn' a spot in a small standard library?
+    A compromise that improves interoperability, is to include a standard interface in the service library, without providing a default implementation.
+    The service library could define a standard interface for a service that deals with primality testing and other advanced numerical algorithms.
+    Developers could then pick their favorite provider for this service among a set of competing implementations.
+  </p>
+  <p>
+    The service library in the MVP only ships providers for services, which are absolutely essential in order to demonstrate a simple interactive application, like guessing a random number.
+    On the long term, the service library hopefully converges to a small, consistent and intuitive set of standard interfaces and default providers.
+  </p>
   <h3>Language framework</h3>
-  <p>The language framework of Dixmix is a necessary concession. Developers can be extremely adamant about programming
-    languages. They are convinced their beloved language is best programming language, regardless what problem the
-    software is trying to solve. The definitive way to resolve this dispute is to have a contest where different
-    languages can compete for developers. The language framework is the arena for this contest. It allows anyone to
-    experiment with programming language features, and promote them to other developers.</p>
-  <p>The framework supports transpilers and compilers for programming languages. A transpiler is easier to write, but a
-    compiler offers complete control over code generation. The MVP ships exactly one transpiler and one compiler. Diet
-    is the compiled programming language and Unity is the transpiled programming language.</p>
-  <p>Diet is not intended to be the most programmer-friendly language. It lacks syntactic sugar to simplify common
-    constructs in programs. Diet is designed to be a simple imperative language that reflects the capabilities of the
-    underlying VM i.e., a high-level assembly language. It should be easy to understand how the Diet compiler generates
-    VM instructions for language constructs. The next Diet script is the obligatory language example.</p>
+  <p>
+    The language framework of Dixmix is a necessary concession.
+    Developers can be extremely adamant about programming languages.
+    They are convinced their beloved language is best programming language, regardless what problem the software is trying to solve.
+    The definitive way to resolve this dispute is to have a contest where different languages can compete for developers.
+    The language framework is the arena for this contest.
+    It allows anyone to experiment with programming language features, and promote them to other developers.
+  </p>
+  <p>
+    The framework supports transpilers and compilers for programming languages.
+    A transpiler is easier to write, but a compiler offers complete control over code generation.
+    The MVP ships exactly one transpiler and one compiler.
+    Diet is the compiled programming language and Unity is the transpiled programming language.
+  </p>
+  <p>
+    Diet is not intended to be the most programmer-friendly language.
+    It lacks syntactic sugar to simplify common constructs in programs.
+    Diet is designed to be a simple imperative language that reflects the capabilities of the underlying VM i.e., a high-level assembly language.
+    It should be easy to understand how the Diet compiler generates VM instructions for language constructs.
+    The next Diet script is the obligatory language example.
+  </p>
   <pre><span class="comment">-- lookup print operation from std.fx service</span>
 <span class="keyword">let</span> print = <span class="specifier">'std.fx'</span>[<span class="literal">"print"</span>]
 print(<span class="literal">"Hello, world!"</span>)</pre>
-  <p>Unity is a general-purpose programming language that transpiles down to Diet. Unity tries to balance simplicity and
-    expressiveness. It adds powerful language constructs to Diet like destructuring and pattern matching, while also
-    keeping the same 'verbose' keywords, <code class="keyword">if</code>, <code class="keyword">do</code>, <code
-      class="keyword">let</code>, <code class="keyword">while</code>, <code class="keyword">repeat</code>, etc. Although
-    Unity is designed to be a beginner-friendly language, it is not an underpowered programming language. As developers
-    gain experience, they should learn and discover the more advanced, and possibly intimidating, features. The next
-    Unity script uses destructuring to simplify the previous Diet example.</p>
+  <p>
+    Unity is a general-purpose programming language that transpiles down to Diet.
+    Unity tries to balance simplicity and expressiveness.
+    It adds powerful language constructs to Diet like destructuring and pattern matching, while also keeping the same 'verbose' keywords, <code class="keyword">if</code>, <code class="keyword">do</code>, <code class="keyword">let</code>, <code class="keyword">while</code>, <code class="keyword">repeat</code>, etc.
+    Although Unity is designed to be a beginner-friendly language, it is not an underpowered programming language.
+    As developers gain experience, they should learn and discover the more advanced, and possibly intimidating, features.
+    The next Unity script uses destructuring to simplify the previous Diet example.
+  </p>
   <pre><span class="comment">-- destructure print operation from std.fx service</span>
 <span class="keyword">let</span> { print } = <span class="specifier">'std.fx'</span> 
 print(<span class="literal">"Hello, world!"</span>)</pre>
-  <p>The language framework is by far the least polished part of the MVP. The Diet compiler and Unity transpiler suffice
-    to demonstrate how Dixmix intends to use the language framework. On the long term, compilers and transpilers should
-    be integrated with Dixmix, i.e. using service providers for scanners, parsers, code generators and other language
-    tools.</p>
+  <p>
+    The language framework is by far the least polished part of the MVP.
+    The Diet compiler and Unity transpiler suffice to demonstrate how Dixmix intends to use the language framework.
+    On the long term, compilers and transpilers should be integrated with Dixmix, i.e. using service providers for scanners, parsers, code generators and other language tools.
+  </p>
   <h1>Runtime system</h1>
-  <p>Explain enough implementation details without committing to one implementation language.</p>
+  <p>
+    The runtime system is responsible for code execution.
+    The source of a program must first be compiled down to bytecode.
+    Bytecode is a a portable, binary format, which contains all the information that the runtime system needs to run the program e.g., dependencies on services.
+    After loading the bytecode, and resolving all required dependencies, the runtime system starts executing the VM instructions inside the bytecode.
+    In this sense, the runtime system resembles an operating system that loads and runs a natively compiled program.
+    An operating system manages real hardware whereas the runtime system of Dixmix controls virtual hardware.
+    The hardware of the runtime system consists of a central processing unit (CPU) and linear memory (MEM).
+  </p>
+  <figure>
+    <svg width="12em" height="12em" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="black"/>
+      <rect x="3" y="3" width="94" height="94" fill="white" />
+      <text x="41" y="15" style="fill:black;font-size:xx-small">host</text>
+      <rect x="6" y="18" width="88" height="76" fill="red" />
+      <rect x="9" y="21" width="82" height="70" fill="white" />
+      <text x="20" y="33" style="fill:black;font-size:xx-small">runtime system</text>
+      <rect x="12" y="36" width="35" height="52" fill="red" />
+      <text x="24" y="53" style="fill:black;font-size:large">C</text>
+      <text x="24" y="69" style="fill:black;font-size:large">P</text>
+      <text x="23" y="85" style="fill:black;font-size:large">U</text>
+      <rect x="53" y="36" width="35" height="52" fill="red" />
+      <text x="65" y="53" style="fill:black;font-size:large">M</text>
+      <text x="67" y="69" style="fill:black;font-size:large">E</text>
+      <text x="65" y="85" style="fill:black;font-size:large">M</text>
+      <text x="41" y="68" style="fill:black;font-size:large">⇔</text>
+    </svg>
+    <figcaption>Embedded runtime system</figcaption>
+  </figure>
+  <p>
+    A host embeds a runtime system.
+    The <dfn>host</dfn> is a hypervisor that schedules a thread of control, which executes CPU instructions of a runtime system in linear memory, mapped by the host.
+    The host is always implementation dependent.
+    It could be a JavaScript worker, running inside a browser or a NodeJS process.
+    It could be a C API, or a Rust <code>trait</code>, or a Java <code>interface</code>. 
+    The host is out of scope in this document.
+    From the perspective of a runtime system, the host is the service <code class="specifier">'std.host'</code> that provides operations to interact with the hosting environment.
+  </p>
+  <p>
+    The single-threaded runtime system controls one CPU core and a memory address space.
+    Linear memory is an array of 128-bit slots i.e., the CPU reads and writes memory in 16-byte units.
+    The size of the address space is always a power of two.
+    The minimum address space is one 'megaslot' (16MB), but the host can grow and shrink linear memory over time.
+    Theoretically, the maximum address space is one 'exaslot' (16EB), although this would cover all available memory on a 64-bit computer.
+    Realistically, linear memory can cover 8EB of RAM, which should suffice for future workloads. 
+  </p>
+  <figure>
+    <box>
+      <binary>
+        <at>0</at>
+        <contains>00000000..00000000</contains>
+      </binary>
+      <binary>
+        <at>1</at>
+        <contains>00000000..00000000</contains>
+      </binary>
+      <register>
+        <at></at>
+        <contains>...</contains>
+      </register>
+      <binary>
+        <at>2<sup>N</sup>-2</at>
+        <contains>00000000..00000000</contains>
+      </binary>
+      <binary>
+        <at>2<sup>N</sup>-1</at>
+        <contains>00000000..00000000</contains>
+      </binary>
+    </box>
+    <figcaption>Linear memory</figcaption>
+  </figure>
+  <p>
+    Absolute addressing is not supported in Dixmix.
+    The CPU always accesses a box in memory, which only covers a range of consecutive slots.
+    The layout of these boxes is discussed in the next section.
+    The details of the CPU and linear memory are explained in other sections of this chapter.
+  </p>
+  <h2>Software things</h2>
+  <p>
+    An object encapsulates a mutable state, which is hidden from the rest of the system.
+    The unique identity of the object allows that particular object to be addressed by a message.
+    The object invokes a method when somebody sends it a message.
+    A method is a delta closure that can cause side effects when called.
+    The method invocation can update the hidden state and it might send other messages to objects.
+  </p>
+  <p>
+    Unlike objects, values are passive exhibitionists that expose their immutable state to the system.
+    A function is a lambda closure that examines and transforms input values into more useful output values.
+    The usefulness of output values is only apparent to the caller of a function.
+    A function does not know why it is being called or from where the input values originate.
+    It only knows how to produce output values from input values.
+  </p>
+  <p>
+    It's obvious that objects and values serve different purposes in software systems.
+    Objects are unique entities whose mutations reflect the dynamics of a software system.
+    The changing state of objects tracks how the system has reacted to stimuli.
+    Values lack identity.
+    A value is a symbolic representation of some concept e.g., a number, a piece of text or a colour, which does not change as time passes by.
+    The colour green cannot suddenly turn into red.
+  </p>
+  <p>
+    But despite the differences, objects and values also have a lot in common.
+    They can be passed around as closure arguments and results.
+    They can be stored in local variables and constants.
+    They can be tested for equality.
+    They can be inspected in a debugger when you're trying to solve a bug.
+    They are essentially the stuff software is made of.
+    They are <dfn>software things</dfn>.
+  </p>
+  <h3>Shapes of things</h3>
+  <p>
+    Every software thing in Dixmix is a manifestations of a shape.
+    The <dfn>shape</dfn> of a software thing conveys information about the structure of its interior state.
+    A shape assumes software things can be represented as boxes in memory that span a finite number of slots.
+    Consider the box of a person thing.
+  </p>
+  <figure>
+    <box>
+      <register>
+        <at>self</at>
+        <contains>⮌</contains>
+      </register>
+      <register>
+        <at>firstName</at>
+        <contains>"John"</contains>
+      </register>
+      <register>
+        <at>lastName</at>
+        <contains>"Doe"</contains>
+      </register>
+    </box>
+    <figcaption>Person thing</figcaption>
+  </figure>
+  <p>
+    The register slot at index <code>self</code> contains the self reference, which always references the thing itself.
+    A <dfn>register</dfn> is a reference to a software thing.
+    The registers at indices <code>firstName</code> and <code>lastName</code> convey the first and last name of the person.
+  </p>
+  <p>
+    A slot is either common or anonymous.
+    A <dfn>common slot</dfn> is present in all manifestations of a shape.
+    All person things have the <code>self</code>, <code>firstName</code> and <code>lastName</code> registers in common.
+    An <dfn>anonymous slot</dfn> is not necessarily present in all manifestations of a shape.
+    A shape only determines whether its manifestations can have anonymous slots.
+    Anonymous slots are employed by shapes whose manifestations have a variable number of slots.
+  </p>
+  <p>
+    Byte strings are software things with a variable number of binary slots.
+    A <dfn>binary slot</dfn> holds opaque data bits.
+    A byte string value is a sequence of bytes, for example the UTF-8 encoding of the text <code>"self"</code>.
+    A byte string stores its bytes in the anonymous binary slots of a box, as shown in the next figure.
+    This box only contains one anonymous binary slot at index <code>1</code>, but longer byte strings require more anonymous binary slots at index <code>2</code>, <code>3</code>, <code>4</code>, etc.
+  </p>
+  <figure>
+    <box>
+      <register>
+        <at>self</at>
+        <contains>⮌</contains>
+      </register>
+      <binary>
+        <at>1</at>
+        <contains>01110011..00001011</contains>
+      </binary>
+    </box>
+    <figcaption>Byte string value "self"</figcaption>
+  </figure>
+  <p>
+    Shapes are software things with a variable number of register slots.
+    The next figure depicts the shape value of all byte strings.
+    The shape defines that byte strings can contain anonymous binary slots (<code>anonBins</code>), that they do not contain anonymous register slots (<code>anonRegs</code>) and that they do not contain common binary slots (<code>cmonBins</code>).
+    The shape furthermore has a unique value (<code>symbol</code>), which differentiates the shape from other shapes.
+    The anonymous register of the shape (<code>1</code>) contains the name of the common <code>self</code> register in byte strings.
+  </p>
+  <figure>
+    <box>
+      <register>
+        <at>self</at>
+        <contains>⮌</contains>
+      </register>
+      <register>
+        <at>symbol</at>
+        <contains>《unique》</contains>
+      </register>
+      <register>
+        <at>anonBins</at>
+        <contains>true</contains>
+      </register>
+      <register>
+        <at>anonRegs</at>
+        <contains>false</contains>
+      </register>
+      <register>
+        <at>cmonBins</at>
+        <contains>0</contains>
+      </register>
+      <register>
+        <at>1</at>
+        <contains>"self"</contains>
+      </register>
+    </box>
+    <figcaption>Shape of a byte string</figcaption>
+  </figure>
+  <p>
+    A shape value is also a manifestation of some shape.
+    The next figure shows the shape of all shape values, which is the only thing in Dixmix that is its own manifestation.
+    The anonymous registers of a shape reveal the names of common registers that manifestations of the shape share.
+  <figure>
+    <box>
+      <register>
+        <at>self</at>
+        <contains>⮌</contains>
+      </register>
+      <register>
+        <at>symbol</at>
+        <contains>《unique》</contains>
+      </register>
+      <register>
+        <at>anonBins</at>
+        <contains>false</contains>
+      </register>
+      <register>
+        <at>anonRegs</at>
+        <contains>true</contains>
+      </register>
+      <register>
+        <at>cmonBins</at>
+        <contains>0</contains>
+      </register>
+      <register>
+        <at>1</at>
+        <contains>"self"</contains>
+      </register>
+      <register>
+        <at>2</at>
+        <contains>"symbol"</contains>
+      </register>
+      <register>
+        <at>3</at>
+        <contains>"anonBins"</contains>
+      </register>
+      <register>
+        <at>4</at>
+        <contains>"anonRegs"</contains>
+      </register>
+      <register>
+        <at>5</at>
+        <contains>"cmonBins"</contains>
+      </register>
+    </box>
+    <figcaption>Shape of a shape</figcaption>
+  </figure>
+  <p>
+    All software things are manifestations of some shape that describes the interior of boxes in memory.
+    A software thing knows what its memory layout should look like.
+    Shapes are however not concerned with mutability.
+    Mutability is an attribute of references to software things.
+    The common <code>self</code> register of a software thing is the reference that defines its mutability.
+  </p>
+  <p>
+    All boxes have a slot in memory that can only be accessed by the runtime system.
+    The hidden slot wraps all consecutive memory slots of a box into a single software thing.
+    This <dfn>surface</dfn> slot encodes important information about a box e.g., the number of binary and register slots.
+    Surface information allows the runtime system to perform bounds checking on slot access inside the box.
+    The figures in this document do not show the hidden surface slot, but its importance should not be underestimated.
+  </p>
+  <p>
+    Boxes are very simple data structures.
+    They offer efficient access to slots when the offset of a slot in a box is known beforehand.
+    Access to common registers by name is possible with a dynamic lookup of the register name in the shape of a software thing.
+  </p>
+  <p>
+    Both objects and values manifest themselves as boxes in memory.
+    Although objects are mutable manifestations, and values are immutable, they are always shaped as boxes with register and binary slots, either common or anonymous.
+    This uniformity allows Dixmix to treat objects and values as generic software things.
+  </p>
+  <h3>Virtual boxes</h3>
+  <p>
+    Every software thing knows its shape in memory, but not every software thing is actually stored in memory.
+    Consider the box of integer value forty-two.
+  </p>
+  <figure>
+    <box>
+      <register>
+        <at>self</at>
+        <contains>⮌</contains>
+      </register>
+      <register>
+        <at>predecessor</at>
+        <contains>41</contains>
+      </register>
+    </box>
+    <figcaption>Integer value forty-two</figcaption>
+  </figure>
+  <p>
+    A positive integer, like the number forty-two, is shaped like a <a href="https://en.wikipedia.org/wiki/Peano_axioms">Peano</a> number.
+    In this case, forty-two knows it is the successor of forty-one, which is stored in the <code>predecessor</code> register.
+    Forty-one is of course also a software thing with a similar box representation that encodes the successor of forty.
+    Although Peano arithmetic is a powerful mathematical concept, it doesn't scale very well in programming.
+  </p>
+  <p>
+    Computers represent signed integers in <a href="https://en.wikipedia.org/wiki/Two%27s_complement">two's complement</a>, using a fixed number of bits.
+    A register with a small integer stores this bit pattern in the register content, but the integer can still be accessed as if it were a box in memory.
+    The small integer is a <dfn>virtual box</dfn>.
+  </p>
+  <p>
+    A register in Dixmix splits its content into two parts: a 64-bit data part and a 64-bit meta part.
+    The data part of a register with a small integer encodes the two's complement of a signed 64-bit integer.
+    The meta part defines the kind of data in the other part of the register.
+    There are four kinds of data parts.
+  </p>
+  <ul>
+    <li>
+      <p>
+        64-bit signed integer (two's complement)
+      </p>
+    </li>
+    <li>
+      <p>
+        64-bit double-precision floating point (<a href="https://en.wikipedia.org/wiki/IEEE_754-1985">IEEE 754</a>)
+      </p>
+    </li>
+    <li>
+      <p>
+        a box reference which points to a (nonvirtual) box in memory
+      </p> 
+    </li>
+    <li>
+      <p>
+        0-bit data vacuum
+      </p> 
+    </li>
+  </ul>
+  <p>
+    The meta part of a register also contains the 60-bit memory address of a shape box.
+    A register derives the shape of the referenced software thing from this memory address.
+    This is especially important for registers with a data vacuum.
+    These registers reference things, which are completely defined by their shape, because they carry no meaningful data.
+    Dixmix uses data vacuums to represent values of <a href="https://en.wikipedia.org/wiki/Nullary_constructor#Haskell_example">nullary constructors</a>.
+    True is a virtual box that only contains a common <code>self</code> register.
+    False is also a virtual box that only contains a common <code>self</code> register, but it has a different shape.
+    The distinctness of registers, which reference boolean values, is not at the data level, but at the meta level.    
+  </p>
+  <figure>
+    <box>
+      <register>
+        <at>True self</at>
+        <contains>⮌</contains>
+      </register>
+    </box>
+    <p></p>
+    <box>
+      <register>
+        <at>False self</at>
+        <contains>⮌</contains>
+      </register>
+    </box>
+    <figcaption>Distinct boolean values</figcaption>
+  </figure>
+  <h3>Basic things</h3>
+  <p>
+    Some things are not explicitly associated with a shape.
+    When the memory address of a shape box in the meta part of a register is zero, the register references a basic thing.
+    A <dfn>basic thing</dfn> derives its shape from the data part of a register.
+    The derivation of the shape is different for the different kinds of data parts.
+  </p>
+  <ul>
+    <li>
+      <dfn>signed integer</dfn>
+      <p>
+        A basic thing with signed integer data is a small integer.
+        Small integers cover the integer range from -2<sup>63</sup> up to and including 2<sup>63</sup>-1.
+      </p>
+      <p>
+        Small integers come in three distinct shapes.
+        A positive integer is shaped like a Peano number that knows its predecessor, as explained earlier.
+        A negative integer is similarly shaped, but it is a negated successor.
+        Minus forty-two is the negated successor of forty-one.
+        Zero is a virtual box that only contains a common <code>self</code> register.
+      </p>
+    </li>
+    <li>
+      <dfn>floating point</dfn>
+      <p>
+        A basic thing with floating point data is a double-precision floating-point number.
+        All floating-point numbers are manifestations of the same shape.
+        A floating-point number is a virtual box with a common <code>self</code>, <code>sign</code>, <code>exponent</code> and <code>mantissa</code> register.
+        The latter three registers expose the internal structure of a floating-point number.
+      </p>
+      <p>
+        The <code>sign</code> register is a boolean.
+        The sign of a basic floating-point number is false for positive numbers and true for negative numbers.
+        The <code>exponent</code> and <code>mantissa</code> registers are small integers.
+        The exponent and mantissa are respectively 11-bit and 52-bit nonnegative integers.
+      </p>
+    </li>
+    <li>
+      <dfn>box reference</dfn>
+      <p>
+        A basic thing with box reference data is a <dfn>black box</dfn> with a common <code>self</code> register.
+        All other register and binary slots of the black box, if any, are anonymous.
+      </p>
+      <p>
+        A black box is a wrapper around a nonvirtual box.
+        It exposes all slots of the wrapped box in a unified manner, regardless what the actual shape of the wrapped box is.
+        Black boxes simplify tooling that must deal with differently shaped boxes e.g., a debugger.
+      </p>
+    </li>
+    <li>
+      <dfn>data vacuum</dfn>
+      <p>
+        A basic thing with a data vacuum is absurd, because it neither carries meaningful data, nor declares a distinct shape.
+        It is not-a-thing.
+        It's a <dfn>nothing</dfn>.
+      </p>
+      <p>
+        Dixmix treats a nothing, i.e. a basic vacuum, very differently from all other software things.
+        In many ways, it resembles the treatment of <a href="https://en.wikipedia.org/wiki/NaN">NaN</a> in floating-point operations.
+        A nothing does not equal anything else, not even another nothing.
+        The virtual box of a nothing is completely empty.
+        It does not have a common <code>self</code> register like all other things.
+      </p>
+    </li>
+  </ul>
+  <h3>Eternal things</h3>
+  <p>
+    Before the VM even boots and executes the first CPU instruction, certain software things must already exist.
+    For example, the shape boxes of boolean values must be located in memory somewhere, because booleans are an essential part of CPU logic.
+    An <dfn>eternal thing</dfn> is a box that lives in readonly memory (ROM).
+    ROM is a 16-bit address space at the start of linear memory.
+    The first megabyte (1MB) in linear memory is reserved for ROM content that all CPU's running on a host share and enjoy. 
+  </p>
+  <p>
+    Eternal things form a closed universe.
+    The registers in the box of an eternal thing can reference boxes of other eternal things, and virtual boxes.
+    An eternal thing cannot escape its way out of ROM memory.
+    In a GC trace, an eternal thing is an endpoint that does not require further expansion.
+  </p>
+  <p>
+    Many eternal shapes are crucial elements of the machinery.
+    Things like byte strings and closures are primitive data structures with special support from the CPU.
+    Dixmix takes a lot of design inspiration from <a href="https://www.lua.org">Lua</a>, which also employs a generic, register-based virtual machine.
+    The shape of primitive things like coroutines are very similar to how Lua structures these things.
+  </p>
+  <p>
+    The next section takes a closer look at these primordial data structures.
+  </p>
+  <h2>Primitives</h2>
+  <p>
+    Certain things need to work out of the box.
+  </p>
+  <h3>Coroutine</h3>
+  <p>
+    A coroutine tracks the execution progress of a single thread of control, which performs a certain task in a software system.
+    It knows exactly what the current state of the VM is, and how that state changes as the CPU executes instructions from memory.
+    Coroutines support cooperative scheduling.
+    A parent coroutine can voluntarily give control to a child coroutine.
+    The child coroutine continues to run, until it yields control back to the parent, or until it gives control to some grandchild.
+    This <a href="https://en.wikipedia.org/wiki/Run-to-completion_scheduling">run-to-completion</a> execution model works well in a single-threaded runtime system, like Dixmix and JavaScript.
+    The lack of preemption forces the runtime system to trust on smooth cooperation from all coroutines.
+    The <dfn>main coroutine</dfn> is the root that sits at the head of the coroutine family.
+  </p>
+  <p>
+    A coroutine encapsulates the state of the VM that executes compiled code of some task.
+    The VM maintains a program counter to keep track of the next instruction where the CPU continues.
+    Every cycle, the CPU fetches two instructions from a binary memory slot that the program counter indicates.
+    The first instruction is always executed, but the second instruction might be skipped.
+    This pairing of instructions is explained later in this chapter.
+  </p>
+  <p>
+    Instructions operate on registers, which are situated in a register window.
+    The <dfn>local register window</dfn> contains the arguments, local variables and scratch space of a closure application.
+  </p>
+  <h3>Closure</h3>
+  <h3>Bytecode</h3>
+  <h3>Byte string</h3>
   <h1>Service library</h1>
-  <p>TODO.</p>
   <h1>Language framework</h1>
-  <p>TODO.</p>
 </body>
 
 </html>
